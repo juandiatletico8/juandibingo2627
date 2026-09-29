@@ -1,0 +1,29 @@
+JUANDIBINGO — MINIWEB
+
+PUBLICAR GRATIS EN GITHUB PAGES
+1. Crea un repositorio nuevo en GitHub, por ejemplo: juandibingo.
+2. Sube TODO el contenido de esta carpeta manteniendo la carpeta assets.
+3. En GitHub: Settings > Pages.
+4. En 'Build and deployment', elige 'Deploy from a branch'.
+5. Branch: main / (root) y guarda.
+6. GitHub te mostrará el enlace público.
+
+ACTUALIZAR PANELES
+Sustituye en /assets la imagen correspondiente SIN CAMBIAR SU NOMBRE.
+Así el enlace de la web no cambia.
+
+Nombres preparados:
+- han-ganado-dos-seguidos.png
+- han-goleado.png
+- han-remontado.png
+- valladolid-goles.png
+- tordesillas-goles.png
+- mojados-goles.png
+- betis-goles.png
+- cisterniga-goles.png
+- victoria-goles.png
+- simancas-goles.png
+- divi-goles.png
+- sur-goles.png
+- liga-nacional-goles.png
+- parquesol-goles.png
