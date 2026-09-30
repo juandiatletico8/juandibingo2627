@@ -1,101 +1,24 @@
 <!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#07160d">
-<title>JuandiBingo</title>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07160d"><title>JuandiBingo</title>
 <style>
-:root{--bg:#06110a;--panel:#0b1b10;--gold:#e7b83f;--cream:#fff8e6;--muted:#a9b5aa;--green:#1fd45c}
-*{box-sizing:border-box} body{margin:0;background:
-radial-gradient(circle at 50% -10%,#174b26 0,#0a2011 28%,#050b07 68%);
-color:var(--cream);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}
-.wrap{width:min(1120px,94%);margin:auto;padding:26px 0 70px}
-header{text-align:center;padding:8px 0 20px}
-.logo{width:min(310px,70vw);max-height:250px;object-fit:contain;filter:drop-shadow(0 10px 25px #000)}
-h1{margin:4px 0 2px;font-size:clamp(30px,6vw,58px);letter-spacing:.04em}
-.sub{color:var(--muted);margin:0 auto 20px}
-.rule{height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:10px 0 32px}
-section{margin:34px 0}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:15px}
-h2{margin:0;font-size:clamp(20px,4vw,31px);letter-spacing:.08em}
-.tag{font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:.14em}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.card{border:1px solid #6f5721;border-radius:18px;background:linear-gradient(180deg,#102316,#09130c);overflow:hidden;
-box-shadow:inset 0 0 0 1px #171f18;cursor:pointer;transition:.18s transform,.18s border-color}
-.card:hover{transform:translateY(-3px);border-color:var(--gold)}
-.thumb{aspect-ratio:9/16;width:100%;display:block;object-fit:cover;background:#101510}
-.meta{padding:13px 14px 15px}.name{font-weight:800;font-size:16px}.hint{font-size:12px;color:var(--muted);margin-top:3px}
-.placeholder{aspect-ratio:9/16;display:grid;place-items:center;text-align:center;padding:18px;
-background:radial-gradient(circle,#17301d,#0a140d 65%);color:#809084}
-.placeholder b{display:block;color:#c9d2ca;font-size:28px;margin-bottom:8px}
-footer{text-align:center;color:#728077;font-size:12px;margin-top:45px}
-dialog{border:0;padding:0;background:#050805;border-radius:14px;max-width:min(94vw,720px);box-shadow:0 20px 80px #000}
-dialog::backdrop{background:#000c}.viewer{position:relative}.viewer img{display:block;max-width:100%;max-height:88vh}
-.close{position:absolute;right:10px;top:10px;border:1px solid #ffffff55;background:#000b;color:white;border-radius:999px;
-width:44px;height:44px;font-size:25px;cursor:pointer}
-@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.meta{padding:10px}.name{font-size:14px}}
-@media(max-width:430px){.wrap{width:95%}.grid{gap:9px}.name{font-size:12px}.hint{font-size:10px}}
-</style>
-</head>
-<body>
-<main class="wrap">
-<header>
-<img class="logo" src="assets/logo-juandibingo.png" alt="JuandiBingo">
-<h1>JUANDIBINGO</h1>
-<p class="sub">Todos los paneles, siempre en el mismo sitio.</p>
-<div class="rule"></div>
-</header>
-
-<section>
-<div class="section-head"><h2>RETOS JUANDIBINGO</h2><span class="tag">Panel general</span></div>
-<div class="grid">
-<article class="card" data-image="assets/han-ganado-dos-seguidos.png"><img class="thumb" src="assets/han-ganado-dos-seguidos.png" alt="Han ganado dos seguidos"><div class="meta"><div class="name">Han ganado dos seguidos</div><div class="hint">Toca para ampliar</div></div></article>
-<article class="card" data-image="assets/han-goleado.png"><img class="thumb" src="assets/han-goleado.png" alt="Han goleado"><div class="meta"><div class="name">Han goleado</div><div class="hint">Toca para ampliar</div></div></article>
-<article class="card" data-image="assets/han-remontado.png"><img class="thumb" src="assets/han-remontado.png" alt="Han remontado"><div class="meta"><div class="name">Han remontado</div><div class="hint">Toca para ampliar</div></div></article>
-</div>
-</section>
-
-<section>
-<div class="section-head"><h2>BINGO DE GOLES</h2><span class="tag">Minutos 1–90+</span></div>
-<div class="grid" id="teams"></div>
-</section>
-
-<footer>JUANDIBINGO · Temporada 2026/27</footer>
-</main>
-
-<dialog id="lightbox"><div class="viewer"><button class="close" aria-label="Cerrar">×</button><img id="large" alt=""></div></dialog>
+:root{--bg:#06110a;--panel:#0b1b10;--gold:#e7b83f;--cream:#fff8e6;--muted:#a9b5aa;--green:#20e267}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,#174b26 0,#0a2011 28%,#050b07 68%);color:var(--cream);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}.wrap{width:min(1160px,94%);margin:auto;padding:18px 0 64px}header{text-align:center;padding:2px 0 10px}.logo{width:min(390px,82vw);height:auto;display:block;margin:0 auto;filter:drop-shadow(0 12px 28px #000)}.nav{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:720px;margin:10px auto 28px}.nav button{border:1px solid #9a7629;background:linear-gradient(#142819,#09130c);color:var(--cream);padding:17px 10px;border-radius:14px;font-weight:900;letter-spacing:.06em;font-size:16px;cursor:pointer}.nav button.active{border-color:#ffd45d;box-shadow:0 0 0 1px #ffd45d55,0 0 22px #e7b83f33;background:linear-gradient(#1d3822,#0c1b10);color:#ffe6a0}.rule{height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 0 28px}.view{display:none}.view.active{display:block}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:15px}h2{margin:0;font-size:clamp(21px,4vw,31px);letter-spacing:.07em}.tag{font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:.13em}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{border:1px solid #6f5721;border-radius:18px;background:linear-gradient(180deg,#102316,#09130c);overflow:hidden;box-shadow:inset 0 0 0 1px #171f18;cursor:pointer;transition:.18s transform,.18s border-color}.card:hover{transform:translateY(-3px);border-color:var(--gold)}.thumb{aspect-ratio:9/16;width:100%;display:block;object-fit:cover;background:#101510}.meta{padding:12px 13px 14px}.name{font-weight:850;font-size:15px}.hint{font-size:12px;color:var(--muted);margin-top:3px}footer{text-align:center;color:#728077;font-size:12px;margin-top:42px}dialog{border:0;padding:0;background:#050805;border-radius:14px;max-width:min(96vw,760px);box-shadow:0 20px 80px #000}dialog::backdrop{background:#000d}.viewer{position:relative}.viewer img{display:block;max-width:100%;max-height:94vh;margin:auto}.close{position:absolute;z-index:2;right:9px;top:9px;border:1px solid #ffffff66;background:#000c;color:#fff;border-radius:999px;width:44px;height:44px;font-size:25px;cursor:pointer}
+@media(max-width:760px){.wrap{width:100%;padding:8px 12px 48px}.logo{width:min(330px,78vw)}.nav{position:sticky;top:0;z-index:5;background:#06110aeF;padding:8px 0;margin:0 auto 20px;backdrop-filter:blur(8px)}.nav button{font-size:13px;padding:14px 7px}.grid{grid-template-columns:1fr;gap:18px;max-width:520px;margin:auto}.card{border-radius:15px}.thumb{aspect-ratio:auto;height:auto}.meta{padding:10px 12px}.name{font-size:15px}.hint{font-size:11px}.section-head{max-width:520px;margin:0 auto 14px}.tag{display:none}}
+@media(min-width:761px) and (max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style></head><body><main class="wrap"><header><img class="logo" src="assets/logo-juandibingo.png" alt="JuandiBingo"></header>
+<nav class="nav" aria-label="Secciones"><button class="active" data-target="general">PANEL GENERAL</button><button data-target="goles">GOLES DE EQUIPOS</button></nav><div class="rule"></div>
+<section id="general" class="view active"><div class="section-head"><h2>PANEL GENERAL</h2><span class="tag">JuandiBingo</span></div><div class="grid">
+<article class="card" data-image="assets/han-ganado-dos-seguidos.png"><img class="thumb" src="assets/han-ganado-dos-seguidos.png" alt="Han ganado dos seguidos"><div class="meta"><div class="name">HAN GANADO DOS SEGUIDOS</div><div class="hint">Toca para ampliar</div></div></article>
+<article class="card" data-image="assets/han-goleado.png"><img class="thumb" src="assets/han-goleado.png" alt="Han goleado"><div class="meta"><div class="name">HAN GOLEADO</div><div class="hint">Toca para ampliar</div></div></article>
+<article class="card" data-image="assets/han-remontado.png"><img class="thumb" src="assets/han-remontado.png" alt="Han remontado"><div class="meta"><div class="name">HAN REMONTADO</div><div class="hint">Toca para ampliar</div></div></article>
+<article class="card" data-image="assets/han-ganado-un-derbi.png"><img class="thumb" src="assets/han-ganado-un-derbi.png" alt="Han ganado un derbi"><div class="meta"><div class="name">HAN GANADO UN DERBI</div><div class="hint">Toca para ampliar</div></div></article>
+</div></section>
+<section id="goles" class="view"><div class="section-head"><h2>GOLES DE EQUIPOS</h2><span class="tag">Minutos 1–90+</span></div><div class="grid" id="teams"></div></section>
+<footer>JUANDIBINGO · Temporada 2026/27</footer></main><dialog id="lightbox"><div class="viewer"><button class="close" aria-label="Cerrar">×</button><img id="large" alt=""></div></dialog>
 <script>
 const teams=[
-["Promesas","valladolid-goles.png",true],
-["Tordesillas","tordesillas-goles.png",false],
-["Mojados","mojados-goles.png",false],
-["Betis","betis-goles.png",false],
-["La Cistérniga","cisterniga-goles.png",false],
-["Victoria","victoria-goles.png",false],
-["Villa de Simancas","simancas-goles.png",false],
-["Divi","divi-goles.png",false],
-["Sur","sur-goles.png",false],
-["Liga Nacional","liga-nacional-goles.png",false],
-["Parquesol","parquesol-goles.png",false]
-];
-const holder=document.querySelector("#teams");
-teams.forEach(([name,file,ready])=>{
- const a=document.createElement("article"); a.className="card";
- if(ready){
-   a.dataset.image="assets/"+file;
-   a.innerHTML=`<img class="thumb" src="assets/${file}" alt="${name}"><div class="meta"><div class="name">${name}</div><div class="hint">Toca para ampliar</div></div>`;
- }else{
-   a.innerHTML=`<div class="placeholder"><div><b>90+</b>Panel pendiente</div></div><div class="meta"><div class="name">${name}</div><div class="hint">Próximamente</div></div>`;
- }
- holder.appendChild(a);
-});
-const dlg=document.querySelector("#lightbox"), large=document.querySelector("#large");
-document.addEventListener("click",e=>{
- const card=e.target.closest(".card[data-image]");
- if(card){large.src=card.dataset.image;large.alt=card.querySelector(".name")?.textContent||"Panel JuandiBingo";dlg.showModal();}
-});
-document.querySelector(".close").addEventListener("click",()=>dlg.close());
-dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
-</script>
-</body></html>
+["RV Promesas","promesas-goles.png"],["Tordesillas","tordesillas-goles.png"],["Mojados","mojados-goles.png"],["Betis","betis-goles.png"],["La Cistérniga","cisterniga-goles.png"],["Victoria","victoria-goles.png"],["V. de Simancas","simancas-goles.png"],["Valladolid DH","valladolid-dh-goles.png"],["Sur","sur-goles.png"],["Valladolid LN","valladolid-ln-goles.png"],["Parquesol","parquesol-goles.png"]];
+const holder=document.querySelector('#teams');teams.forEach(([name,file])=>{const a=document.createElement('article');a.className='card';a.dataset.image='assets/'+file;a.innerHTML=`<img class="thumb" src="assets/${file}" alt="${name}"><div class="meta"><div class="name">${name}</div><div class="hint">Toca para ampliar</div></div>`;holder.appendChild(a)});
+const buttons=[...document.querySelectorAll('.nav button')],views=[...document.querySelectorAll('.view')];buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.toggle('active',x===b));views.forEach(v=>v.classList.toggle('active',v.id===b.dataset.target));window.scrollTo({top:0,behavior:'smooth'})}));
+const dlg=document.querySelector('#lightbox'),large=document.querySelector('#large');document.addEventListener('click',e=>{const card=e.target.closest('.card[data-image]');if(card){large.src=card.dataset.image;large.alt=card.querySelector('.name')?.textContent||'Panel JuandiBingo';dlg.showModal()}});document.querySelector('.close').addEventListener('click',()=>dlg.close());dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+</script></body></html>
